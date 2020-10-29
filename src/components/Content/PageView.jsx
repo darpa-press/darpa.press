@@ -14,7 +14,7 @@ const PageView = styled.div`
     overflow: auto;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
-    padding: 1.5rem;
+    padding: 1rem;
     z-index: 1;
     color: #128ba1;
 
