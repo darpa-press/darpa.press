@@ -230,7 +230,7 @@ export default [
                 title: "Page template",
                 type: "a .jpx file",
                 location: "for computerised embroidery machines",
-                url: "https://github.com/darpa-press/encirculars",
+                url: "https://github.com/darpa-press/encirculars-template",
             },
         ],
     },
