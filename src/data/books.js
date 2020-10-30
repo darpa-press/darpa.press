@@ -101,13 +101,6 @@ const books = [
                 location: "at invite.darpa.press",
                 url: "https://invite.darpa.press",
             },
-            {
-                catno: "DC002.04",
-                title: "‘darpa-press/stretchtext’",
-                type: "source code",
-                location: "at github.com",
-                url: "https://github.com/darpa-press/stretchtext",
-            },
         ],
     },
     {
