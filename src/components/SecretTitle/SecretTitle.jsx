@@ -3,7 +3,7 @@ import useInterval from "@use-it/interval";
 
 const asterisks = "*⁎✿❀❁✾⊛✢✣✤✥✱✲✳✺✻✼✽❃❉❊❋⧆⩮".split("");
 
-export default () => {
+const SecretTitle = () => {
     const [number, setNumber] = useState(
         Math.floor(Math.random() * asterisks.length)
     );
@@ -12,3 +12,5 @@ export default () => {
     }, 5000);
     return <span style={{ fontSize: "1em" }}>{asterisks[number]}</span>;
 };
+
+export default SecretTitle;

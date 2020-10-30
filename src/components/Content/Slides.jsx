@@ -46,12 +46,11 @@ const IframeSizer = styled.div`
 
 const IframeLink = styled.a`
     z-index: 2;
-    backdrop-filter: invert(100%);
     padding: 0.333rem 0.75rem;
     font-size: 0.6rem;
     border-radius: 1rem;
-    color: white;
-    mix-blend-mode: difference;
+    background: #f3f3f3;
+    color: black;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
@@ -60,12 +59,10 @@ const IframeLink = styled.a`
     transform: translateX(-50%);
     left: 50%;
     &:hover {
-        color: white;
-        backdrop-filter: invert(85%);
     }
 `;
 
-export default ({ media }) => {
+const SlideshowExp = ({ media }) => {
     const [slide, setSlide] = useState(0);
     useEffect(() => {
         setSlide(0);
@@ -117,3 +114,5 @@ export default ({ media }) => {
         </Slideshow>
     );
 };
+
+export default SlideshowExp;

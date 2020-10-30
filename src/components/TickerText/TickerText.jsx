@@ -28,7 +28,7 @@ const TickerBox = styled.div`
     white-space: nowrap;
     user-select: none;
     pointer-events: none;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
         display: none;
     }
 `;
@@ -36,8 +36,8 @@ const TickerBox = styled.div`
 const TickerInside = styled.span`
     display: inline-block;
     padding-left: 100%;
-    animation: ${tickerAnim} ${props => props.speed}s linear infinite;
-    animation-delay: -${props => props.speed / 2}s;
+    animation: ${tickerAnim} ${(props) => props.speed}s linear infinite;
+    animation-delay: -${(props) => props.speed / 2}s;
 `;
 
 const Ticker = styled.div`
@@ -59,29 +59,29 @@ const orientations = [
         left: 0,
         top: 0,
         transform: "rotate(0deg)",
-        transformOrigin: "0% 0%"
+        transformOrigin: "0% 0%",
     },
     {
         right: FONT_HEIGHT,
         bottom: 0,
         transform: "rotate(90deg)",
-        transformOrigin: "100% 100%"
+        transformOrigin: "100% 100%",
     },
     {
         bottom: 0,
         right: -FONT_HEIGHT,
         transform: "rotate(-90deg)",
-        transformOrigin: "0% 100%"
+        transformOrigin: "0% 100%",
     },
     {
         bottom: 0,
         right: 0,
         transform: "rotate(-180deg)",
-        transformOrigin: "50%"
-    }
+        transformOrigin: "50%",
+    },
 ];
 
-export default ({ text, isShowingText }) => {
+const TickerExp = ({ text, isShowingText }) => {
     const speed = 80;
     return (
         <TickerShowHide style={{ opacity: isShowingText ? 1 : 0 }}>
@@ -89,14 +89,14 @@ export default ({ text, isShowingText }) => {
                 <TickerBox key={index} style={orientStyle}>
                     <Ticker>
                         <TickerInside speed={speed}>
-                            {[...Array(4).keys()].map(i => (
+                            {[...Array(4).keys()].map((i) => (
                                 <span key={i}>{text}&nbsp;</span>
                             ))}
                         </TickerInside>
                     </Ticker>
                     <Ticker2>
                         <TickerInside speed={speed}>
-                            {[...Array(4).keys()].map(i => (
+                            {[...Array(4).keys()].map((i) => (
                                 <span key={i}>{text}&nbsp;</span>
                             ))}
                         </TickerInside>
@@ -106,3 +106,5 @@ export default ({ text, isShowingText }) => {
         </TickerShowHide>
     );
 };
+
+export default TickerExp;

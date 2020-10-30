@@ -50,6 +50,14 @@ const PageView = styled.div`
         font-style: italic;
     }
 
+    a {
+        color: #128ba1;
+
+        &:hover {
+            color: #0c5a69;
+        }
+    }
+
     .indent {
         padding-left: 3rem;
         @media (max-width: 768px) {
@@ -135,7 +143,7 @@ const MobileLink = styled(Link)`
     }
 `;
 
-export default () => {
+const PageViewExp = () => {
     const { id } = useParams();
     const scrollRef = useRef();
     const { title, tagline, media, excerpt, items } = content[Number(id) - 1];
@@ -164,3 +172,5 @@ export default () => {
         </>
     );
 };
+
+export default PageViewExp;

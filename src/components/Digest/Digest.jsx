@@ -41,7 +41,7 @@ const Form = styled.div`
     }
 `;
 
-export default () => {
+const Digest = () => {
     return (
         <Table>
             <Form>
@@ -72,3 +72,5 @@ export default () => {
         </Table>
     );
 };
+
+export default Digest;

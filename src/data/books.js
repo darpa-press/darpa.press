@@ -1,6 +1,6 @@
 import React from "react";
 
-export default [
+const books = [
     {
         link: "https://deciduous.darpa.press",
         location: "at deciduous.darpa.press",
@@ -17,16 +17,19 @@ export default [
         title: "Deciduous",
         type: "A codex",
         year: "from 2017–",
-        excerpt: (
-            <p className="indent">
+        excerpt: [
+            <p className="indent" key="1">
                 The first Darpa publication is a codex. It contains an
                 illustrated guide to recollecting ways that the Internet isn’t.
                 It adopts the form of herbal manuals, intended to describe the
                 ameliorative properties of plants. Falling in the Internet as it
                 is, <em>Deciduous</em>’s fragmented pages address the lassitudes
                 of our technical togetherness&hellip;
-            </p>
-        ),
+            </p>,
+            <p className="indent" key="2">
+                <a href="https://deciduous.darpa.press">Open ⤑</a>
+            </p>,
+        ],
         media: [{ type: "iframe", url: "https://deciduous.darpa.press" }],
         items: [
             {
@@ -62,16 +65,19 @@ export default [
         title: "Darpa–Cedar",
         type: "An anthology",
         year: "from 2018–",
-        excerpt: (
-            <p className="indent">
+        excerpt: [
+            <p className="indent" key="1">
                 The second Darpa publication is an anthology of lost causes. New
                 entries are added, now and then. Only one is displayed at a
                 time; it changes on the decimal hour. The colours of the text
                 change daily, according to the animals, tools, grain, pasture,
                 trees, roots, flowers, fruits and minerals of the revolutionary
                 calendar&hellip;
-            </p>
-        ),
+            </p>,
+            <p className="indent" key="2">
+                <a href="https://cedar.darpa.press">Open ⤑</a>
+            </p>,
+        ],
         media: [{ type: "iframe", url: "https://cedar.darpa.press" }],
         items: [
             {
@@ -155,16 +161,19 @@ export default [
         title: "Poiesis",
         type: "A word processor",
         year: "2019–",
-        excerpt: (
-            <p className="indent">
+        excerpt: [
+            <p className="indent" key="1">
                 The fourth Darpa publication is a word processor for poetic
                 text. It counts syllables and guesses (imperfectly) at their
                 emphasis. This might help you write. While paperwork has
                 exploded, there still isn’t enough poetry. Your writing is saved
                 locally, so, if you refresh the page or revisit later, you can
                 start where you left off&hellip;
-            </p>
-        ),
+            </p>,
+            <p className="indent" key="2">
+                <a href="https://poiesis.darpa.press">Open ⤑</a>
+            </p>,
+        ],
         media: [{ type: "iframe", url: "https://poiesis.darpa.press" }],
         items: [
             {
@@ -248,13 +257,18 @@ export default [
         type: "An email address",
         year: "from 2019–",
         excerpt: (
-            <p className="indent">
-                The sixth Darpa publication is an email address that opens to a
-                mailing pool. It is unmaintained, but actively receives and
-                conveys anything that is sent to it. You might also think of it
-                as a chain of microservices, like sleepers who wake each other
-                in order&hellip;
-            </p>
+            <React.Fragment>
+                <p className="indent">
+                    The sixth Darpa publication is an email address that opens
+                    to a mailing pool. It is unmaintained, but actively receives
+                    and conveys anything that is sent to it. You might also
+                    think of it as a chain of microservices, like sleepers who
+                    wake each other in order&hellip;
+                </p>
+                <p className="indent">
+                    <a href="https://keyhole.darpa.press">Join ⤑</a>
+                </p>
+            </React.Fragment>
         ),
         media: [
             { type: "iframe", url: "https://keyhole.darpa.press" },
@@ -297,3 +311,5 @@ export default [
         ],
     },
 ];
+
+export default books;

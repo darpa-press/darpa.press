@@ -29,7 +29,7 @@ const Cell = styled.div`
     }
 `;
 
-export default () => {
+const Header = () => {
     return (
         <HeaderLine>
             <Cell>
@@ -49,3 +49,5 @@ export default () => {
         </HeaderLine>
     );
 };
+
+export default Header;

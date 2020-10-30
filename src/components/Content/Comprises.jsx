@@ -6,6 +6,7 @@ const ComprisesOl = styled.ol`
     display: flex;
     flex-direction: column;
     margin-bottom: 25vh;
+    text-style: normal;
     a:hover {
         color: #0c5a69;
     }
@@ -28,7 +29,7 @@ const ComprisesItem = styled.div`
     }
 `;
 
-export default ({ items }) => (
+const ComprisesExport = ({ items }) => (
     <>
         <p className="extra-space">Comprises</p>
         <ComprisesOl className="indent">
@@ -52,3 +53,5 @@ export default ({ items }) => (
         </ComprisesOl>
     </>
 );
+
+export default ComprisesExport;
