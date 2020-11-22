@@ -22,9 +22,9 @@ const books = [
                 The first Darpa publication is a codex. It contains an
                 illustrated guide to recollecting ways that the Internet isn’t.
                 It adopts the form of herbal manuals, intended to describe the
-                ameliorative properties of plants. Falling in the Internet as it
-                is, <em>Deciduous</em>’s fragmented pages address the lassitudes
-                of our technical togetherness&hellip;
+                ameliorative properties of plants. Falling within the Internet
+                as it is, <em>Deciduous</em>’s fragmented pages address the
+                lassitudes of our technical togetherness&hellip;
             </p>,
             <p className="indent" key="2">
                 <a href="https://deciduous.darpa.press">Open ⤑</a>

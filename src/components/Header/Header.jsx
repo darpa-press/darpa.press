@@ -38,7 +38,7 @@ const Header = () => {
             <Cell style={{ flex: 1 }}>
                 ( tending&nbsp;
                 <span style={{ fontSize: "0.7em" }}>towards</span>&nbsp;
-                <span style={{ fontSize: "0.7em" }}>zero</span> )
+                <span style={{ fontSize: "0.5em" }}>zero</span> )
             </Cell>
             <Cell>
                 <Link to="/digest">
