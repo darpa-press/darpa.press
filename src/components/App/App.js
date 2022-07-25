@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../node_modules/normalize.css/normalize.css";
 import "fonts/fonts.css";
 import styled from "styled-components";
 
