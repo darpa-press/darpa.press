@@ -1,52 +1,33 @@
 import React from "react";
 import "fonts/fonts.css";
-import styled from "styled-components";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import BookList from "components/BookList/BookList";
-import GlobalStyle from "components/GlobalStyle/GlobalStyle";
 import Header from "components/Header/Header";
 import PageView from "components/Content/PageView";
 import Digest from "components/Digest/Digest";
-
-const Container = styled.div`
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-    @media screen and (min-width: 800px) {
-        padding: 1rem;
-    }
-`;
 
 const App = () => {
     return (
         <Router>
             <Header />
-            <Route path="/v/:id">
-                <PageView />
-            </Route>
-            <Route path="/"></Route>
-            <Switch>
-                <Route path="/digest">
-                    <Digest />
-                </Route>
-                <Route>
-                    <BookList />
-                </Route>
-            </Switch>
+            <Routes>
+                <Route path="/v/:id" element={<PageView />} />
+            </Routes>
+            <Routes>
+                <Route path="/digest" element={<Digest />} />
+                <Route path="*" element={<BookList />} />
+            </Routes>
         </Router>
     );
 };
 
 const AppWithFonts = () => (
     <>
-        <GlobalStyle />
-        <Container>
+        <div className="p-4 md:p-8 md:flex md:flex-col min-h-[100vh] justify-between">
             <App />
-        </Container>
+        </div>
     </>
 );
 

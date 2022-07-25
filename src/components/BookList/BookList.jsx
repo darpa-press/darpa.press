@@ -7,25 +7,7 @@ import arrayChunk from "array-chunk";
 import books from "data/books";
 import SecretTitle from "components/SecretTitle/SecretTitle";
 
-const Table = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-around;
-    margin-top: 2rem;
-`;
-
 const Row = styled(Link)`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 1rem 0;
-    height: 2.5rem;
-    transition: filter 0.125s ease;
-    filter: ${(props) => (props.isBlurred ? "blur(10px)" : "none")};
-    &:hover {
-        filter: none;
-    }
     @media screen and (max-width: 767px) {
         flex-direction: column;
     }
@@ -64,10 +46,13 @@ const BookRow = ({
     seconds,
 }) => {
     return (
-        <Row
+        <Link
+            className="md:flex block md:flex-row justify-start pb-8 md:pb-4 md:py-4 px-0 md:h-10 transition-all hover:filter-none !important"
+            style={{
+                filter: isBlurred ? "blur(10px)" : "none",
+            }}
             to={`/v/${number}`}
             key={title}
-            isBlurred={isBlurred}
             onMouseEnter={() => {
                 setIsHovering(true);
                 setStatement(prepStatement(statement));
@@ -102,7 +87,7 @@ const BookRow = ({
                     ? replaceLine[3]
                     : location}
             </Cell>
-        </Row>
+        </Link>
     );
 };
 
@@ -128,7 +113,10 @@ const BookList = () => {
     const id = findId && Number(findId[1]);
 
     return (
-        <Table onMouseLeave={() => setIsHovering(false)}>
+        <div
+            className="md:flex md:flex-col flex-1 justify-around mt-8"
+            onMouseLeave={() => setIsHovering(false)}
+        >
             {[...books].reverse().map((book, index) => (
                 <BookRow
                     key={book.number}
@@ -143,7 +131,7 @@ const BookList = () => {
                     seconds={seconds}
                 />
             ))}
-        </Table>
+        </div>
     );
 };
 

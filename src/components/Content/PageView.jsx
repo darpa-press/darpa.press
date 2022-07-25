@@ -6,22 +6,12 @@ import Comprises from "./Comprises";
 import Slides from "./Slides";
 
 const PageView = styled.div`
-    position: fixed;
-    top: 0;
-    left: 24vw;
-    width: calc(76vw);
-    height: 100%;
-    overflow: auto;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
-    padding: 1rem;
     z-index: 1;
     color: #128ba1;
 
     @media (max-width: 768px) {
         width: 100%;
         left: 0;
-        padding: 1rem;
         height: calc(100% - 3rem);
         top: 3rem;
     }
@@ -136,7 +126,7 @@ const MobileLink = styled(Link)`
         position: fixed;
         align-items: center;
         padding: 0.3rem 1rem 0;
-        background: rgba(255, 255, 255, 0);
+        background: rgba(214, 212, 204, 0);
         z-index: 3;
         width: 100%;
         backdrop-filter: blur(20px);
@@ -155,7 +145,10 @@ const PageViewExp = () => {
     return (
         <>
             <MobileLink to="/">Darpa</MobileLink>
-            <PageView ref={scrollRef}>
+            <PageView
+                className="z-10 fixed top-0 left-[24vw] w-[76vw] h-full overflow-auto bg-darpa bg-opacity-40 backdrop-blur-[20px] p-8"
+                ref={scrollRef}
+            >
                 <PageViewInside>
                     <Top>
                         <PageViewHeader>

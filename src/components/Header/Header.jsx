@@ -2,15 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const HeaderLine = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    @media (max-width: 767px) {
-        justify-content: space-between;
-    }
-`;
-
 const Cell = styled.div`
     &:nth-child(1) {
         flex: 0 0 calc(25% + 1rem);
@@ -31,7 +22,7 @@ const Cell = styled.div`
 
 const Header = () => {
     return (
-        <HeaderLine>
+        <div className="flex flex-row align-start justify-between md:justify-start">
             <Cell>
                 <Link to={"/"}>Darpa</Link>
             </Cell>
@@ -46,7 +37,7 @@ const Header = () => {
                     <span style={{ position: "relative", top: "1rem" }}>➳</span>
                 </Link>
             </Cell>
-        </HeaderLine>
+        </div>
     );
 };
 
