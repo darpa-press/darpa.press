@@ -355,9 +355,9 @@ const books = [
                 <p className="indent">
                     The eighth Darpa publication is an instrument that turns
                     text into music by way of Solresol, a language fabricated in
-                    the 19th century and meant as an intermediary step between
-                    other languages. Based on the eight-note tonal scale, it is
-                    very difficult to speak or comprehend.{" "}
+                    the 19th century and meant as an peacemaker between other
+                    languages. Based on the eight-note tonal scale, it is very
+                    difficult to speak or comprehend.{" "}
                 </p>
             </React.Fragment>
         ),
