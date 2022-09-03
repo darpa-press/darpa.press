@@ -347,7 +347,7 @@ const books = [
                 &hellip;”
             </>
         ),
-        title: "Misolla",
+        title: "Mi-sol-la",
         type: "An instrument",
         year: "from 2020—",
         excerpt: (
@@ -364,7 +364,7 @@ const books = [
         items: [
             {
                 catno: "DC008.01",
-                title: "Misolla",
+                title: "Mi-sol-la",
                 type: "an instrument",
                 location: "at misolla.darpa.press",
                 url: "https://misolla.darpa.press",
