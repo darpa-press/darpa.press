@@ -146,7 +146,7 @@ const PageViewExp = () => {
         <>
             <MobileLink to="/">Darpa</MobileLink>
             <PageView
-                className="z-10 fixed top-0 left-[24vw] w-[76vw] h-full overflow-auto bg-darpa bg-opacity-40 backdrop-blur-[20px] p-8"
+                className="z-10 fixed top-0 left-[24vw] w-[76vw] h-full overflow-auto bg-darpa bg-opacity-10 backdrop-blur-[20px] p-8"
                 ref={scrollRef}
             >
                 <PageViewInside>

@@ -303,6 +303,118 @@ const books = [
             },
         ],
     },
+    {
+        link: "https://teapot.darpa.press",
+        location: "via teapot.darpa.press",
+        number: 7,
+        statement: "permanently movingly permentantly moving permanently",
+        tagline: (
+            <>“ &hellip; permanently movingly permentantly moving &hellip; ”</>
+        ),
+        title: "Teapot",
+        type: "A redirect",
+        year: "from 2021—",
+        excerpt: (
+            <React.Fragment>
+                <p className="indent">
+                    The seventh Darpa publication is a primitive redirector. You
+                    won’t so much see Teapot while you read it, and you might
+                    land in one or another artificial grove, but you might come
+                    to terms gradually with a strict, blank schedule that
+                    doesn’t make itself known&hellip;
+                </p>
+            </React.Fragment>
+        ),
+        media: [{ type: "iframe", url: "https://teapot.darpa.press" }],
+        items: [
+            {
+                catno: "DC007.01",
+                title: "Teapot",
+                type: "a redirect",
+                location: "via teapot.darpa.press",
+                url: "https://teapot.darpa.press",
+            },
+        ],
+    },
+    {
+        link: "https://misolla.darpa.press",
+        location: "at misolla.darpa.press",
+        number: 8,
+        statement: "Or if the well and equal and never",
+        tagline: (
+            <>
+                “ &hellip; or if the good (or well) and equal and never
+                &hellip;”
+            </>
+        ),
+        title: "Misolla",
+        type: "An instrument",
+        year: "from 2020—",
+        excerpt: (
+            <React.Fragment>
+                <p className="indent">
+                    The eighth Darpa publication is an instrument that turns
+                    text into music by way of Solresol, an intermediary language
+                    fabricated in the 19th century. It is very difficult to
+                    speak or comprehend.{" "}
+                </p>
+            </React.Fragment>
+        ),
+        media: [{ type: "iframe", url: "https://misolla.darpa.press" }],
+        items: [
+            {
+                catno: "DC008.01",
+                title: "Misolla",
+                type: "an instrument",
+                location: "at misolla.darpa.press",
+                url: "https://misolla.darpa.press",
+            },
+            {
+                catno: "DC008.02",
+                title: "From here / to Mundaneum",
+                type: "a livery",
+                location: "on a 2000 Honda HR-V",
+                url: "",
+            },
+        ],
+    },
+    {
+        link: "https://retiring.darpa.press",
+        location: "at retiring.darpa.press",
+        number: 9,
+        statement:
+            "We worked downward from our difficulties to discover the basic principles at the root of our unhappiness",
+        tagline: (
+            <>
+                “We worked downward from our difficulties to discover the basic
+                principles at the root of our unhappiness &hellip; ”
+            </>
+        ),
+        title: "Retiring",
+        type: "A negation",
+        year: "from 2022—",
+        excerpt: (
+            <React.Fragment>
+                <p className="indent">
+                    The ninth Darpa publication is a chapbook which assembles
+                    itself in reaction. Every time a new Internet standard is
+                    published, one of these is published, also: short recipes
+                    for negations found or anticipated in the ever-growing
+                    corpus of how things should work.
+                </p>
+            </React.Fragment>
+        ),
+        media: [{ type: "iframe", url: "https://retiring.darpa.press" }],
+        items: [
+            {
+                catno: "DC009.01",
+                title: "Retiring",
+                type: "a negation",
+                location: "at retiring.darpa.press",
+                url: "https://retiring.darpa.press",
+            },
+        ],
+    },
 ];
 
 export default books;
