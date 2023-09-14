@@ -380,8 +380,8 @@ const books = [
         ],
     },
     {
-        link: "https://retiring.darpa.press",
-        location: "at retiring.darpa.press",
+        link: "https://recall.darpa.press",
+        location: "at recall.darpa.press",
         number: 9,
         statement:
             "We worked downward from our difficulties to discover the basic principles at the root of our unhappiness",
@@ -391,7 +391,7 @@ const books = [
                 principles at the root of our unhappiness &hellip; ”
             </>
         ),
-        title: "Retiring",
+        title: "Recall",
         type: "A negation",
         year: "from 2022—",
         excerpt: (
@@ -405,14 +405,14 @@ const books = [
                 </p>
             </React.Fragment>
         ),
-        media: [{ type: "iframe", url: "https://retiring.darpa.press" }],
+        media: [{ type: "iframe", url: "https://recall.darpa.press" }],
         items: [
             {
                 catno: "DC009.01",
-                title: "Retiring",
+                title: "Recall",
                 type: "a negation",
-                location: "at retiring.darpa.press",
-                url: "https://retiring.darpa.press",
+                location: "at recall.darpa.press",
+                url: "https://recall.darpa.press",
             },
         ],
     },
