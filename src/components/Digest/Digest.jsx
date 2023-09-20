@@ -1,17 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Mailchimp from "react-mailchimp-form";
 
-const Table = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: flex-start;
-    margin-top: 2rem;
-`;
+import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
 
 const Form = styled.div`
-    padding: 2.5rem 0;
     h1 {
         margin-bottom: 1rem;
     }
@@ -42,34 +34,44 @@ const Form = styled.div`
 `;
 
 const Digest = () => {
+    const url =
+        "https://press.us20.list-manage.com/subscribe/post?u=ec5dde8a3c4f18d5e199d0350&amp;id=5871c0aff4";
+    const { loading, error, success, message, handleSubmit } =
+        useMailChimpForm(url);
+    const { fields, handleFieldChange } = useFormFields({
+        EMAIL: "",
+    });
+
     return (
-        <Table>
+        <div className="flex-1 pt-8">
             <Form>
                 <h1>
                     To receive an occasional digest
                     <br /> of our publishing,
                 </h1>
-                <Mailchimp
-                    action="https://press.us20.list-manage.com/subscribe/post?u=ec5dde8a3c4f18d5e199d0350&amp;id=5871c0aff4"
-                    fields={[
-                        {
-                            name: "EMAIL",
-                            placeholder: "enter your email address",
-                            type: "email",
-                            required: true,
-                        },
-                    ]}
-                    messages={{
-                        sending: "Sending...",
-                        success: "Thank you for subscribing to the digest.",
-                        error: "An unexpected internal error has occurred.",
-                        empty: "You must write an e-mail.",
-                        duplicate: "You are already subscribed to the digest",
-                        button: "Send ➳",
+                <form
+                    onSubmit={(event) => {
+                        event.preventDefault();
+                        handleSubmit(fields);
                     }}
-                />
+                >
+                    <input
+                        id="EMAIL"
+                        autoFocus
+                        type="email"
+                        value={fields.EMAIL}
+                        onChange={handleFieldChange}
+                        placeholder="enter your email address"
+                    />
+                    <button>Send ➳</button>
+                </form>
+                <div>
+                    {loading && "Sending..."}
+                    {error && message}
+                    {success && "Thank you for subscribing to the digest."}
+                </div>
             </Form>
-        </Table>
+        </div>
     );
 };
 

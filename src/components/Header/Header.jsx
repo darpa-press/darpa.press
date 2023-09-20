@@ -31,11 +31,9 @@ const Header = () => {
                 <span style={{ fontSize: "0.7em" }}>towards</span>&nbsp;
                 <span style={{ fontSize: "0.5em" }}>friendship</span> )
             </Cell>
-            <Cell>
-                <Link to="/digest">
-                    Digest{" "}
-                    <span style={{ position: "relative", top: "1rem" }}>➳</span>
-                </Link>
+            <Cell className="flex flex-row gap-8">
+                <Link to="/about">???</Link>
+                <Link to="/digest">Digest</Link>
             </Cell>
         </div>
     );

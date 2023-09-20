@@ -1,12 +1,13 @@
 import React from "react";
-import "fonts/fonts.css";
+import "@/fonts/fonts.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import BookList from "components/BookList/BookList";
-import Header from "components/Header/Header";
-import PageView from "components/Content/PageView";
-import Digest from "components/Digest/Digest";
+import BookList from "@/components/BookList/BookList";
+import Header from "@/components/Header/Header";
+import PageView from "@/components/Content/PageView";
+import Digest from "@/components/Digest/Digest";
+import About from "@/components/About/About";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
             </Routes>
             <Routes>
                 <Route path="/digest" element={<Digest />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<BookList />} />
             </Routes>
         </Router>

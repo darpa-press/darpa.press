@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import useInterval from "@use-it/interval";
+import { useInterval } from "usehooks-ts";
 import styled from "styled-components";
 import arrayChunk from "array-chunk";
 
-import books from "data/books";
-import SecretTitle from "components/SecretTitle/SecretTitle";
+import books from "@/data/books";
+import SecretTitle from "@/components/SecretTitle/SecretTitle";
 
 const Row = styled(Link)`
     @media screen and (max-width: 767px) {

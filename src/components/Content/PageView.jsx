@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import styled from "styled-components";
-import content from "data/books";
+import content from "@/data/books";
 import Comprises from "./Comprises";
 import Slides from "./Slides";
 
