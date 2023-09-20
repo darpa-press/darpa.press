@@ -17,9 +17,8 @@
         "vite-tsconfig-paths": "^4.2.1"
     },
     "scripts": {
-        "deploy": "now --target production -n darpa && now rm darpa --safe --yes",
         "start": "vite",
-        "build": "tsc && vite build",
+        "build": "vite build",
         "serve": "vite preview"
     },
     "eslintConfig": {
