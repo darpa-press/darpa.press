@@ -2,6 +2,12 @@ import React from "react";
 
 const emails = [
     {
+        title: "Call for information: Leukos / Lumo",
+        date: "Thu 2 Nov, 2023",
+        summary:
+            "The summit’s members were chanting children’s rhymes about stones, metals, plants, animals, stars...",
+    },
+    {
         title: "Solsidosi Solala",
         date: "Fri 20 Oct, 2023",
         summary:
