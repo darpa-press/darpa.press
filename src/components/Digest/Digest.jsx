@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
 
+import emails from "../../data/emails";
+
 const Form = styled.div`
     h1 {
         margin-bottom: 1rem;
@@ -15,18 +17,12 @@ const Form = styled.div`
         padding: 0.5rem;
         border: 1px solid rgba(0, 0, 0, 0.2);
         width: 100%;
-        max-width: 20em;
     }
     button {
         cursor: pointer;
-        font-size: 0.8rem;
-        padding: 0.5rem;
         background: none;
         border: 0;
         color: rgba(0, 0, 0, 0.8);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-            Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-            "Segoe UI Symbol";
         @media screen and (max-width: 767px) {
             padding: 0.75rem 0;
         }
@@ -50,6 +46,7 @@ const Digest = () => {
                     <br /> of our publishing,
                 </h1>
                 <form
+                    className="flex flex-col md:flex-row"
                     onSubmit={(event) => {
                         event.preventDefault();
                         handleSubmit(fields);
@@ -62,8 +59,9 @@ const Digest = () => {
                         value={fields.EMAIL}
                         onChange={handleFieldChange}
                         placeholder="enter your email address"
+                        className="max-md:w-full md:max-w-[20rem]"
                     />
-                    <button>Send ➳</button>
+                    <button className="px-4 max-md:text-left">Send ➳</button>
                 </form>
                 <div>
                     {loading && "Sending..."}
@@ -71,6 +69,19 @@ const Digest = () => {
                     {success && "Thank you for subscribing to the digest."}
                 </div>
             </Form>
+            <div className="pt-12 pb-4">Recently</div>
+            <div className="flex flex-col gap-4">
+                {emails.map((email) => (
+                    <div className="" key={email.date}>
+                        <div>
+                            <em>{email.title}</em>{" "}
+                            <div className="float-right">({email.date})</div>
+                        </div>
+                        <div></div>
+                        <div>{email.summary}</div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
